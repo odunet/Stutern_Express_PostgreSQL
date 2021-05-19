@@ -1,0 +1,36 @@
+<!-- Landing Page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stutern Task</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to stutern task | Update Avatar</h1>
+    </header>
+    <section class="card">
+        <h3>Click button below to send file to server</h3>
+{{!-- AAAA --}}
+            <form class="showcase-form" id="form_" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Register.</legend>
+                    <div class="form-control" id="imageField">
+                        <img src="/image/avatar.png" alt="Upload Image" id="avatar">
+                        <input type="file" id="file" accept="image/*" name="avatar">
+                    </div>
+                    <input type="submit" name="submit" value="submit" class="btn">
+                    <input type="number" name="inp" id="inp" placeholder="Input ID of data to be updated">
+                </fieldset>
+            </form>
+{{!-- AAAA  --}}
+        <div id="result">
+        </div>
+    </section>
+</body>
+</html>

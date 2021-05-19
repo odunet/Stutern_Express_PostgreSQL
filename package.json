@@ -1,0 +1,44 @@
+{
+  "name": "week7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node run prod",
+    "dev:es": "nodemon dist-src/app.js",
+    "dev:cj": "nodemon src/app.js",
+    "transpile": "babel src --out-dir dist-src",
+    "clean": "rimraf dist-src",
+    "build": "npm-run-all clean transpile",
+    "dev": "NODE_ENV=development npm-run-all build server",
+    "prod": "NODE_ENV=production npm-run-all build server"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "axios": "^0.21.1",
+    "babel-polyfill": "^6.26.0",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.11.1",
+    "hbs": "^4.1.2",
+    "multer": "^1.4.2",
+    "npm-run-all": "^4.1.5",
+    "pg": "^8.6.0",
+    "rimraf": "^3.0.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
